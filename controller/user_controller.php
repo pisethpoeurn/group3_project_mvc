@@ -17,12 +17,12 @@
             $data['page'] = "task/user/add";
         }
 
-        function form_data(&$data) {
+        function add(&$data) {
             $add_data = m_add($_POST);
             if($add_data) {
-                $action = "user/view";
+                $action = "view";
             }else {
-                $action = "user/add";
+                $action = "add";
             }
             header("Location: index.php?action=$action");
         }

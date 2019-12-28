@@ -12,17 +12,17 @@
         return $rows ;
     }
     function m_add($data) {
-        $fullname = $_POST['name'];
-        $gender = $_POST['sex'];
+        $fullname = $_POST['username'];
+        $gender = $_POST['gender'];
         $email = $_POST['email'];
-        $startDate = $_POST['startDate'];
-        $endDate = $_POST['endDate'];
+        $startDate = $_POST['startdate'];
+        $endDate = $_POST['enddate'];
         include "connection.php";
-        $query = "INSERT INTO student(name,gender,email,startDate,endDate)
+        $query = "INSERT INTO tbl_user(Username,gender,email,startDate,endDate)
                     VALUES('$fullname','$gender','$email','$startDate','$endDate')";
                 // var_dump($query);die();
         $result = mysqli_query($conn,$query);
-        var_dump($result);die();
+        // var_dump($result);die();
         
         return $result;
     }

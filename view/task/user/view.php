@@ -3,7 +3,7 @@
     <hr>
 <div class="row">
     <div class="col-md-12">
-        <a href="index.php?action=add" class="btn btn-success">Add New</a>
+        <a href="index1.php?action=add" class="btn btn-success">Add New</a>
     </div>
 </div>
 <table class="table table-bordered mt-3">
@@ -27,11 +27,11 @@
   <tbody>
     <tr>
       <td><?php echo $id;?></td>
-      <td><?php echo $rows['name'];?></td>
+      <td><?php echo $rows['Username'];?></td>
       <td><?php echo $rows['gender'];?></td>
       <td><?php echo $rows['email'];?></td>
-      <td><?php echo $rows['startDate'];?></td>
-      <td><?php echo $rows['endDate'];?></td>
+      <td><?php echo $rows['startdate'];?></td>
+      <td><?php echo $rows['enddate'];?></td>
       <td>
         <a href="index.php?action=detail&id=<?php echo $rows['id'];?>" ><i class="material-icons" >remove_red_eye</i></a>
         <a href="index.php?action=edit&id=<?php echo $rows['id'];?>"><i class="material-icons">edit</i></a>

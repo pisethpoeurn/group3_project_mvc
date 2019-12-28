@@ -20,11 +20,25 @@
 
   function delete(&$data){
     $delete_data = m_delete();
-    if($$delete_data){
-        $action = "task/book/view";
+    if($delete_data){
+        $action = "view";
     }else{
         echo " Cannot Delete";
     }
     header("Location:index.php?action=$action");
  }
+ 
+ function add(&$data){
+  $data['page'] = "task/book/add";
+}
+
+function form_data(&$data) {
+  $add_data = m_add_data($_POST);
+  if($add_data) {
+      $action = "view";
+  }else {
+      $action = "add";
+  }
+  header("Location: index.php?action=$action");
+}
 ?>

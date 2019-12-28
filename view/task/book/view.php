@@ -40,7 +40,7 @@
           <td>
             <a href="index.php?action=detail&id=<?php echo $result['book_id']; ?>"><i class="material-icons">remove_red_eye</i></a>
             <a href="index.php?action=edit&id=<?php echo $result['book_id']; ?>"><i class="material-icons text-success">edit</i></a>
-            <a href="index.php?action=delete&id=<?php echo $result['book_id']; ?>"><i class="material-icons text-danger">delete</i></a>
+            <a href="index.php?action=delete&id=<?php echo $result['book_id']; ?>"><i class="material-icons text-danger"onclick="return confirm('Are you sure you want to delete?');">delete</i></a>
           </td>
           <td>
               <button type="button" class="btn border-info text-info">Booking</button>
